@@ -13,3 +13,4 @@ TypeScript React Ant Design Demo
 功能展示：
 - Space.Compact组件
 - Input和Button组件的组合使用
+- 支持切换组件大小（small/middle/large）

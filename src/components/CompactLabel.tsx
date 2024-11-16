@@ -18,18 +18,26 @@ export const CompactLabel: FC<CompactLabelProps> = ({
 }) => {
   const compactItemContext = useContext(SpaceCompactItemContext);
   const isFirstItem = compactItemContext?.isFirstItem;
-  const { borderRadius } = theme.useToken().token;
+  const { 
+    borderRadius,
+    controlHeightSM,
+    controlHeight,
+    controlHeightLG,
+    paddingContentHorizontalSM,
+    paddingContentHorizontal,
+    paddingContentHorizontalLG
+  } = theme.useToken().token;
 
   const sizeHeight = {
-    small: '24px',
-    middle: '32px',
-    large: '40px'
+    small: controlHeightSM,
+    middle: controlHeight,
+    large: controlHeightLG
   };
 
   const sizePadding = {
-    small: '0 7px',
-    middle: '4px 11px',
-    large: '6px 15px'
+    small: `0 ${paddingContentHorizontalSM}px`,
+    middle: `4px ${paddingContentHorizontal}px`,
+    large: `6px ${paddingContentHorizontalLG}px`
   };
 
   const baseStyle: CSSProperties = {
