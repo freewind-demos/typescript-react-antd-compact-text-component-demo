@@ -25,7 +25,14 @@ export const CompactLabel: FC<CompactLabelProps> = ({
     controlHeightLG,
     paddingContentHorizontalSM,
     paddingContentHorizontal,
-    paddingContentHorizontalLG
+    paddingContentHorizontalLG,
+    paddingXXS,
+    paddingXS,
+    padding,
+    colorBorder,
+    colorBgContainer,
+    lineHeight,
+    motionDurationMid,
   } = theme.useToken().token;
 
   const sizeHeight = {
@@ -35,21 +42,21 @@ export const CompactLabel: FC<CompactLabelProps> = ({
   };
 
   const sizePadding = {
-    small: `0 ${paddingContentHorizontalSM}px`,
-    middle: `4px ${paddingContentHorizontal}px`,
-    large: `6px ${paddingContentHorizontalLG}px`
+    small: `${paddingXXS}px ${paddingContentHorizontalSM}px`,
+    middle: `${paddingXS}px ${paddingContentHorizontal}px`,
+    large: `${padding}px ${paddingContentHorizontalLG}px`
   };
 
   const baseStyle: CSSProperties = {
     padding: sizePadding[size],
-    border: '1px solid #d9d9d9',
+    border: `1px solid ${colorBorder}`,
     borderRight: 0,
-    backgroundColor: '#fafafa',
+    backgroundColor: colorBgContainer,
     height: sizeHeight[size],
     display: 'inline-flex',
     alignItems: 'center',
-    lineHeight: 1.5,
-    transition: 'all 0.3s',
+    lineHeight: lineHeight,
+    transition: `all ${motionDurationMid}`,
     whiteSpace: 'nowrap',
     flex: 'none',
     ...(isFirstItem && {
