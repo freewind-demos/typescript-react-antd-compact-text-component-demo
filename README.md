@@ -1,11 +1,15 @@
-TypeScript React Hello World Demo
+TypeScript React Ant Design Demo
 =================================
 
-一个最简单的Typescript + react项目，使用了webpack
+一个使用 TypeScript + React + Ant Design 的简单项目，展示了Space.Compact组件的使用。
 
-```
-npm install
-npm run demo
-```
+使用方法：
 
-It will open page on browser automatically.
+    npm install
+    npm start
+
+将自动在浏览器中打开页面。
+
+功能展示：
+- Space.Compact组件
+- Input和Button组件的组合使用
